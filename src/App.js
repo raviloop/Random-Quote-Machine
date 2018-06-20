@@ -45,14 +45,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Random Quote Machine</h1>
-        </header>
+        <h1 className="App-title">RANDOM QUOTE MACHINE</h1>
+        <hr style={{ width: '80%' }} />
         <div id="quote-box">
-          <p id="text"> {this.state.quote} </p>
-          <p id="author"> {this.state.author} </p>
-          <button id="new-quote" onClick={this.getQuoteHandler}>New Quote</button>
-          <a ref="tweet_tag" id="tweet-quote" >Tweet this</a>
+          <div className="quote-author">
+            <p id="text"> {this.state.quote}  </p>
+            <p id="author"> - {this.state.author} </p>
+          </div>
+          <div className="butttons" style={{marginBottom:"30px"}}>
+            <button id="new-quote" onClick={this.getQuoteHandler}>New Quote</button>
+            <a ref="tweet_tag" id="tweet-quote" >Tweet </a>
+          </div>
         </div>
       </div>
     );
